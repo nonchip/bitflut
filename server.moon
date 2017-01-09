@@ -7,8 +7,8 @@ import cdef_BF_FRAME from require 'bitflut_cdefs'
 
 ffi.cdef cdef_BF_FRAME
 
-server = assert socket.udp!
-assert server\setsockname '*', 54321
+server = assert socket.udp6!
+assert server\setsockname '::', 54321
 server\settimeout 1
 
 sdl.init sdl.INIT_VIDEO

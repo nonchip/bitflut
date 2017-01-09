@@ -17,7 +17,7 @@ ffi.cdef[[
   };
 ]]
 
-ip = arg[1] or '127.0.0.1'
+ip = arg[1] or '::1'
 xoff = tonumber arg[2] or 0
 yoff = tonumber arg[3] or 0
 wait = tonumber arg[4] or 5000
@@ -25,7 +25,7 @@ wait = tonumber arg[4] or 5000
 frame = ffi.new 'struct BF_FRAME'
 frame.magic=ffi.new 'char [4]', 'BFPX'
 
-client = assert socket.udp!
+client = assert socket.udp6!
 
 fsize=ffi.sizeof 'struct BF_FRAME'
 
