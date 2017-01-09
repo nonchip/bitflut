@@ -2,7 +2,7 @@
 a defnull/pixelflut inspired binary framebuffer thingie
 
 ## Usage:
-run the server, it'll listen on ipv4/*/udp/54321.
+run the server, it'll listen on `ipv4/*/udp/54321`.
 to draw a pixel, send a binary datagram formatted as:
 
     byte:    01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16
